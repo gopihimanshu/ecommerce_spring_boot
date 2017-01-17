@@ -1,0 +1,15 @@
+CREATE TABLE `ecomproducts` (
+  `id`            INT NOT NULL AUTO_INCREMENT,
+  `name`          VARCHAR(45) NULL,
+  `stock_number`  VARCHAR(10) NULL,
+  `description`   VARCHAR(45) NULL,
+  `rating`        INT NULL DEFAULT 0,
+  `no_of_reviews` INT NULL DEFAULT 0,
+  `list_price`    INT NULL NOT NULL,
+  `per_off`       INT NULL,
+  `actual_price`  INT NULL,
+  `quantity`      INT NULL,
+  `isrestricted`  TINYINT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC),
+  UNIQUE INDEX `stock_number_UNIQUE` (`stock_number` ASC));
