@@ -1,4 +1,4 @@
-CREATE TABLE `ecomproducts` (
+CREATE TABLE `products` (
   `id`            INT NOT NULL AUTO_INCREMENT,
   `name`          VARCHAR(45) NULL,
   `stock_number`  VARCHAR(10) NULL,
