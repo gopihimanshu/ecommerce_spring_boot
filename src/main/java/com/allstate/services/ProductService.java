@@ -24,6 +24,7 @@ public class ProductService {
         }
         return this.repository.save(product);
     }
+
     public Product findById(int id){
         return this.repository.findOne(id);
     }
@@ -45,6 +46,10 @@ public class ProductService {
             int actualPrice=productUpdate.getList_price()-productUpdate.getList_price()*productUpdate.getPer_off()/100;
             productUpdate.setActual_price(actualPrice);
         }
+        productUpdate.setList_price(product.getList_price());
+        productUpdate.setNo_of_reviews(product.getNo_of_reviews());
+        productUpdate.setQuantity(product.getQuantity());
+        productUpdate.setRating(product.getRating());
         productUpdate.setList_price(product.getList_price());
         return this.repository.save(productUpdate);
     }
