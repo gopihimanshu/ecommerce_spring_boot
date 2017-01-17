@@ -49,8 +49,13 @@ public class ProductController {
         return this.service.findAverageRating();
     }
 
-    @RequestMapping(value = "/product/reviews", method = RequestMethod.GET)
-    public Integer findByReview(){
+    @RequestMapping(value = "/product/review", method = RequestMethod.GET)
+    public Integer findTotalReview(){
         return this.service.findTotalReviews();
+    }
+
+    @RequestMapping(value = "/product/quantity", method = RequestMethod.GET)
+    public Integer findTotalQuantity(){
+        return this.service.findTotalQuantity();
     }
 }

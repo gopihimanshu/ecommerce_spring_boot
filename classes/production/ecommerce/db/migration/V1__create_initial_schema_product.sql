@@ -1,7 +1,7 @@
 CREATE TABLE `products` (
   `id`            INT NOT NULL AUTO_INCREMENT,
-  `name`          VARCHAR(45) NULL,
-  `stock_number`  VARCHAR(10) NULL,
+  `name`          VARCHAR(45) NOT NULL NULL,
+  `stock_number`  VARCHAR(10) NOT NULL NULL,
   `description`   VARCHAR(45) NULL,
   `rating`        INT NULL DEFAULT 0,
   `no_of_reviews` INT NULL DEFAULT 0,

@@ -57,7 +57,13 @@ public class ProductService {
 
     public Integer findTotalReviews(){
         List<Product> productList = (ArrayList<Product>)this.repository.findAll();
-        int productTotalReview = productList.stream().map((product)->(product.getNo_of_reviews())).reduce(0,(a,c)->a+c/productList.size());
+        int productTotalReview = productList.stream().map((product)->(product.getNo_of_reviews())).reduce(0,(a,c)->a+c);
         return productTotalReview;
+    }
+
+    public Integer findTotalQuantity(){
+        List<Product> productList = (ArrayList<Product>)this.repository.findAll();
+        int productQuantity = productList.stream().map((product)->(product.getQuantity())).reduce(0,(a,c)->a+c);
+        return productQuantity;
     }
 }

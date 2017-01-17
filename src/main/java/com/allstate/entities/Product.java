@@ -47,6 +47,12 @@ public class Product {
 
     public int getNo_of_reviews() {return no_of_reviews;}
     public void setNo_of_reviews(int no_of_reviews) {this.no_of_reviews = no_of_reviews;}
+
+    public int getQuantity() {return quantity;}
+    public void setQuantity(int quantity) {this.quantity = quantity;}
+
+//    public boolean isrestricted() {return isrestricted;}
+//    public void setIsrestricted(boolean isrestricted) {this.isrestricted = isrestricted;}
 }
 
 
